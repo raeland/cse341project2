@@ -12,10 +12,13 @@ POST http://localhost:3000/inventory HTTP/1.1
 content-type: application/json
 
 {
-    "email":"aWeaver@test.com",
-    "username":"Brown",
-    "name":"Rebekah",
-    "ipaddress":"94.121.168.53"
+    "sku": "any-001",
+    "name": "Milk Powder",
+    "description": "any",
+    "unit": "grams",
+    "unit_weight": 20,
+    "unit_cost": 11.67,
+    "stock": 3
 }
 
 ### GET Single Item
@@ -27,11 +30,13 @@ PUT http://localhost:3000/inventory/6516c544e607fc26fbcf1998 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Maxine",
-    "lastName":"Maxwell",
-    "email":"mMaxwell@test.com",
-    "favoriteColor":"Blue",
-    "birthday":"09/09/1988"
+    "sku": "put-001",
+    "name": "put",
+    "description": "put",
+    "unit": "kg",
+    "unit_weight": 1,
+    "unit_cost": 1,
+    "stock": 1
 }
 
 ### Delete Item
