@@ -27,14 +27,12 @@ app
     })
     .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
     .use(cors({ origin: '*' }))
-    .use('/', require('./routes'))
-
-app.get('/', (req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged Out") })
-
-mongodb.initDb((err) => {
-    if (err) {
-        console.log(err)
-    } else {
-        app.listen(port, () => {console.log(`Database is listening and node running on port ${port}`)})
-    }
-})
+    .use('/', require('./routes'))    
+    
+    mongodb.initDb((err) => {
+        if (err) {
+            console.log(err);
+        } else {
+            app.listen(port, () => {console.log(`Database is listening and node running on port ${port}`)});
+        }
+    })
