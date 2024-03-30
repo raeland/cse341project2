@@ -9,11 +9,11 @@ const app = express()
 
 app
     .use(bodyParser.json())
-    .use(session({
-        secret: "secret",
-        resave: false,
-        saveUninitialized: true,
-    }))
+    //.use(session({
+      //  secret: "secret",
+        //resave: false,
+        //saveUninitialized: true,
+    //}))
 
     // This is the basic epxression session ({..}) initialization.
     .use((req, res, next) => {
