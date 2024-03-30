@@ -4,7 +4,7 @@ const mongodb = require('./data/database')
 const session = require('express-session')
 const cors = require('cors')
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 const app = express()
 
 app
@@ -29,10 +29,10 @@ app
     .use(cors({ origin: '*' }))
     .use('/', require('./routes'))    
     
-    mongodb.initDb((err) => {
-        if (err) {
-            console.log(err);
-        } else {
-            app.listen(port, () => {console.log(`Database is listening and node running on port ${port}`)});
-        }
-    })
+   // mongodb.initDb((err) => {
+     //   if (err) {
+       //     console.log(err);
+        //} else {
+          //  app.listen(port, () => {console.log(`Database is listening and node running on port ${port}`)});
+       // }
+   // })

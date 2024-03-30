@@ -10,15 +10,15 @@ const initDb = (callback) => {
         console.log('Db is already initialized!')
         return callback(null, database)
     }
-    MongoClient.connect(process.env.MONGODB_URL)
-        .then((client) => {
-            database = client;
-            callback(null, database);
-        })
-        .catch((err) => {
-            callback(err);
-        })
-}
+    //MongoClient.connect(process.env.MONGODB_URL)
+      //  .then((client) => {
+        //    database = client;
+          //  callback(null, database);
+        //})
+        //.catch((err) => {
+          //  callback(err);
+        //})
+//}
 
 const getDatabase = () => {
     if (!database) {
@@ -30,4 +30,4 @@ const getDatabase = () => {
 module.exports = {
     initDb,
     getDatabase
-}
+}}
