@@ -1,15 +1,15 @@
 // LOCALHOST
 ### Get main
 GET http://localhost:3000
-
+Content-Type: application/json
 
 ### Get inventory items
-GET http://localhost:3000/inventory
-
+GET http://localhost:8080/inventory
+Content-Type: application/json
 
 ### POST / Create users
 POST http://localhost:3000/inventory HTTP/1.1
-content-type: application/json
+Content-Type: application/json
 
 {   
     "sku":"any-001",
@@ -27,7 +27,7 @@ GET http://localhost:3000/inventory/66062409f36c9e5e2f1dc9a7
 
 ### PUT / Update Item
 PUT http://localhost:3000/inventory/66062409f36c9e5e2f1dc9a7 HTTP/1.1
-content-type: application/json
+Content-Type: application/json
 
 {
     "sku":"put-001",
